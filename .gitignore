@@ -6,3 +6,9 @@ links_small.csv
 movies_metadata.csv
 ratings.csv
 ratings_small.csv
+env/
+.env/
+env
+venv/
+.venv/
+venv
