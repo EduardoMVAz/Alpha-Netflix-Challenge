@@ -123,7 +123,7 @@ Para definirmos o nosso K, fizemos 20 iterações, com 5 K's diferentes:
 Mesmo sabendo que 20 iteracoes podem não ser suficientes para definir o melhor K, nos permitiu visualizar qual valor de K seria o mais adequado para a nossa base de dados, com base nos erros absolutos médios das notas preditas e seus desvios-padrão. Com K=150, obtivemos os menores valores para ambos.
 Para visualizar o resultado desses testes, vá para o arquivo `testes.ipynb`. **Executar as células com iterações pode modificar nossa base de dados, além de demorar um tempo considerável.**
 
-Na ultima cedula desse arquivo, plotamos um gráfico que mostra que $K=150$ é um bom valor para a decomposição de valores singulares, visto que a partir de $K=150$ o erro não diminui mais significativamente.
+Na ultima cedula desse arquivo, temos um mine exemplo na qual plotamos um gráfico que mostra que $K=150$ é um bom valor para a decomposição de valores singulares, visto que a partir de $K=150$ o erro não diminui mais significativamente.
 
 ### Conclusão:
 
