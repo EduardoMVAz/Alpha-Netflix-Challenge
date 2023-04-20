@@ -19,9 +19,14 @@ O objetivo deste trabalho é implementar um sistema de recomendação de filmes 
 `env\Scripts\activate` (Windows)
 5. Instale as dependências do projeto através do comando no terminal:
 `pip install -r requirements.txt`
-6. Entre no arquivo demo.ipynb e execute as células (*Atenção: Não executar as celulas de iteracoes, pois vai afetar nossa base de dados*)
+6. Entre no arquivo `demo.ipynb` e execute as células (*Atenção: Não executar as celulas de iteracoes, pois vai afetar nossa base de dados*)
 7. Para desativar o ambiente virtual, basta executar o comando no terminal:
 `deactivate`
+
+Para executar uma demonstração do projeto, é possível rodar as células disponíveis no arquivo `demo.ipynb`. Nesse arquivo, temos uma explicação e um exemplo de como o algoritmo funciona.
+Como as células possuem diversas iterações, o tempo de execução pode ser muito longo. Ainda assim, estão apresentadas explicações sobre o funcionamento dos algoritmos tanto aqui quanto nas células de Markdown presentes no notebook.
+O arquivo `testes.ipynb` também pode ser executado, demonstrando, também com explicações, como achamos o valor de K para ser utilizado no algoritmo SVD utilizado na demo.
+Em ambos os arquivos, temos salvos os resultados das execuções e os gráficos gerados para melhor visualização. Ambos os arquivos estão salvos em PDF (`demo.pdf` e `testes.pdf`) nesse repositório para melhor visualização, em caso de perda dos resultados.
 
 ### Teoria:
 
@@ -131,5 +136,5 @@ Obtivemos, ao final da demonstração, uma matriz de notas preditas, que pode se
 O erro absoluto médio foi de, aproximadamente, 1.8, com desvio padrão de, aproximadamente, 1.2.
 Os resultados obtidos poderiam ser alterados se testássemos as 1000 iterações realizadas para diferentes valores de K. 
 Contudo, o resultado é aparentemente satisfatório. O erro absoluto médio pode ser considerado baixo, visto que as notas variam de 0 a 5 e, portanto, sendo um valor abaixo de 2.5 (metade da escala de notas), consideramos o erro baixo.
-Ademais, analisando o histograma de distribuição dos erros absolutos médios das notas preditas, a maior densidade de erros se encontra abaixo de 1, valor ainda mais baixo do erro absoluto médio, que pode ter sido puxado para cima por uma minoria de erros maiores de 4.
+Ademais, analisando o histograma de distribuição dos erros absolutos médios das notas preditas (disponível no arquivo `demo.ipynb`), a maior densidade de erros se encontra abaixo de 1, valor ainda mais baixo do erro absoluto médio, que pode ter sido puxado para cima por uma minoria de erros maiores de 4.
 Portanto, levando em consideração as informações acima expostas, acreditamos que nosso sistema é satisfatório e poderia ser utilizado em produção para reduzir a complexidade de um problema de recomendação de filmes.
