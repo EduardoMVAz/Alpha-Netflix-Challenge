@@ -102,13 +102,13 @@ O objetivo de tal parte é demonstrar como a SVD pode ser usada parareduzir a di
 Em seguida, faremos diversas iterações para obter diversas simulações, para um número de componentes (K) fixo, a ser explicado abaixo, verificando, assim, a distribuição dos erros cometidos na reconstrução da matriz original.
 Os resultados são salvos em um arquivo `csv`, para que sejam lidos no arquivo `demo.ipynb`, onde será possível realizar uma demonstração da SVD e uma análise dos resultados obtidos.
 
-## Celulas:
+## Células:
 
 Para cada célula do Notebook, temos uma explicação do que ela faz em Markdown. É recomendado que não execute as celulas de iterações, pois vai afetar nossa base de dados.
 
 Para o nosso código em `demo.ipynb`, foi escolhido $K=150$ para a decomposição de valores singulares.
 
-## Sobre o K
+## Sobre o valor de K escolhido:
 
 K representa o número de valores singulares mais importantes que você deseja manter na decomposição SVD da matriz. Ao definir o valor de K, você está especificando quantos dos valores singulares mais importantes deseja manter na decomposição. Ou seja, você está comprimindo a matriz original para uma matriz de dimensão reduzida, mantendo apenas os K valores singulares mais importantes.
 
@@ -121,6 +121,15 @@ Para definirmos o nosso K, fizemos 20 iterações, com 5 K's diferentes:
 - K = 50
 
 Mesmo sabendo que 20 iteracoes podem não ser suficientes para definir o melhor K, nos permitiu visualizar qual valor de K seria o mais adequado para a nossa base de dados, com base nos erros absolutos médios das notas preditas e seus desvios-padrão. Com K=150, obtivemos os menores valores para ambos.
-Para visualizar o resultado desses testes, vá para o arquivo `testes.ipynb` **Executar as células com iterações pode modificar nossa base de dados, além de demorar um tempo considerável.**
+Para visualizar o resultado desses testes, vá para o arquivo `testes.ipynb`. **Executar as células com iterações pode modificar nossa base de dados, além de demorar um tempo considerável.**
 
 Na ultima cedula desse arquivo, plotamos um gráfico que mostra que $K=150$ é um bom valor para a decomposição de valores singulares, visto que a partir de $K=150$ o erro não diminui mais significativamente.
+
+### Conclusão:
+
+Obtivemos, ao final da demonstração, uma matriz de notas preditas, que pode ser usada para recomendação de filmes.
+O erro absoluto médio foi de, aproximadamente, 1.8, com desvio padrão de, aproximadamente, 1.2.
+Os resultados obtidos poderiam ser alterados se testássemos as 1000 iterações realizadas para diferentes valores de K. 
+Contudo, o resultado é aparentemente satisfatório. O erro absoluto médio pode ser considerado baixo, visto que as notas variam de 0 a 5 e, portanto, sendo um valor abaixo de 2.5 (metade da escala de notas), consideramos o erro baixo.
+Ademais, analisando o histograma de distribuição dos erros absolutos médios das notas preditas, a maior densidade de erros se encontra abaixo de 1, valor ainda mais baixo do erro absoluto médio, que pode ter sido puxado para cima por uma minoria de erros maiores de 4.
+Portanto, levando em consideração as informações acima expostas, acreditamos que nosso sistema é satisfatório e poderia ser utilizado em produção para reduzir a complexidade de um problema de recomendação de filmes.
