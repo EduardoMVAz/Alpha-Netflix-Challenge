@@ -19,7 +19,7 @@ O objetivo deste trabalho é implementar um sistema de recomendação de filmes 
 `env\Scripts\activate` (Windows)
 5. Instale as dependências do projeto através do comando no terminal:
 `pip install -r requirements.txt`
-6. Entre no arquivo demo.ipynb e execute as células (*Atenção: Nao executar as celulas de iteracoes, pois vai afetar nossa base de dados*)
+6. Entre no arquivo demo.ipynb e execute as células (*Atenção: Não executar as celulas de iteracoes, pois vai afetar nossa base de dados*)
 7. Para desativar o ambiente virtual, basta executar o comando no terminal:
 `deactivate`
 
